@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن - منصة BAC-A-M التعليمية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="moving-text">منصة BAC-A-M التعليمية</div>
+        </header>
+        
+        <div class="nav-buttons">
+            <a href="index.html" class="nav-btn">
+                <i class="fas fa-home"></i> الصفحة الرئيسية
+            </a>
+            <a href="index.html#lessons" class="nav-btn">
+                <i class="fas fa-book"></i> الدروس والملخصات
+            </a>
+            <a href="index.html#motivation" class="nav-btn">
+                <i class="fas fa-fire"></i> التحفيز
+            </a>
+            <a href="about.html" class="nav-btn">
+                <i class="fas fa-users"></i> من نحن
+            </a>
+        </div>
+        
+        <!-- صفحة من نحن -->
+        <div id="about-page" class="page">
+            <h2 class="page-title">من نحن</h2>
+            
+            <div class="about-content">
+                <p>نحن <span class="highlight">منصة BAC-A-M</span>، فريق متخصص من المعلمين والمختصين التربويين، نسعى لمساعدة طلاب البكالوريا في الجزائر لتحقيق أفضل النتائج.</p>
+                
+                <p>تأسست منصتنا عام 2020 بهدف تقديم محتوى تعليمي متميز يساعد الطلاب على فهم المواد الدراسية بشكل أعمق وأسهل.</p>
+                
+                <p>نقدم في منصتنا:</p>
+                <ul style="text-align: right; margin: 20px 0; padding-right: 30px; list-style-type: none;">
+                    <li><i class="fas fa-check-circle" style="color: var(--accent); margin-left: 10px;"></i> دروس مفصلة في جميع المواد</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent); margin-left: 10px;"></i> ملخصات مركزة تغطي المنهج بأكمله</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent); margin-left: 10px;"></i> نماذج اختبارات وحلولها</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent); margin-left: 10px;"></i> نصائح وإرشادات للتحضير الجيد للبكالوريا</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent); margin-left: 10px;"></i> كلمات تحفيزية لتعزيز الثقة بالنفس</li>
+                </ul>
+                
+                <p>رسالتنا هي تمكين الطلاب من تحقيق أقصى إمكاناتهم العلمية والوصول إلى أهدافهم الأكاديمية.</p>
+                
+                <p>تواصل معنا عبر قنوات التواصل الاجتماعي لدعمك في رحلتك التعليمية.</p>
+            </div>
+        </div>
+        
+        <!-- أزرار التواصل الاجتماعي -->
+        <div class="social-container">
+            <a href="https://www.tiktok.com/@bac_2026_dz.20" class="social-btn tiktok" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/bac_2026_dz.20?igsh=MWM2bXY1a2sxN2U3dg==" class="social-btn instagram" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/@bac_dz1234?si=bHeLkau0k1ScEbGJ" class="social-btn youtube" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61575602175352" class="social-btn facebook" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        
+        <footer>
+            <p>جميع الحقوق محفوظة © 2025 منصة BAC-A-M التعليمية</p>
+        </footer>
+    </div>
+
+    <script>
+        // إعداد Intersection Observer لتأثير التضخم عند الرؤية
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                } else {
+                    entry.target.classList.remove('in-view');
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+        
+        // مراقبة جميع الاقتباسات
+        document.querySelectorAll('.quote-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
